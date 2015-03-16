@@ -1,3 +1,3 @@
-faculdadeJavaI
+Infnet
 ==============
-Execicios dados em aula
+Exercicios, trabalhos e provas
