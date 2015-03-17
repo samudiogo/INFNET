@@ -1,7 +1,7 @@
 /***
- * Crie um mÈtodo que recebe uma lista de inteiros e um n˙mero inteiro (chamado de "raz„o"). 
- * O mÈtodo deve retornar um boolean. 
- * Este boolean È verdadeiro se a lista recebida È uma Progress„o AritmÈtica, considerando a raz„o passada como par‚metro.
+ * Crie um m√©todo que recebe uma lista de inteiros e um n√∫mero inteiro (chamado de "raz√£o"). 
+ * O m√©todo deve retornar um boolean. 
+ * Este boolean √© verdadeiro se a lista recebida √© uma Progress√£o Aritm√©tica, considerando a raz√£o passada como par√¢metro.
  * 
  */
 
@@ -11,15 +11,22 @@ import java.util.ArrayList;
 
 public class ProgressaoAritmetica {
 
-	//este mÈtodo verifica se a lista de numero È pg tendo como razao o parametro "razao"
-	public static boolean isPg(ArrayList<Integer> intList, int razao) throws Exception
+	//este m√©todo verifica se a lista de numero √© PA tendo como razao o parametro "razao"
+	public static boolean isPa(ArrayList<Integer> intList, int razao) throws Exception
 	{		
 		for(int n = 0; n < (intList.size()-1); n++)
 			if(calcPG(intList.get(n), razao) != intList.get((n+1)))
-				throw new Exception("N„o È PG");					
+				throw new Exception("N√£o √© PA");					
 		return true;
 	}
-	
+	// alternativo, para quem n√£o conhece tratamento de exce√ß√£o ("throws Exception")
+	public static boolean isPaAlternativo(ArrayList<Integer> intList, int razao)
+	{		
+		for(int n = 0; n < (intList.size()-1); n++)
+			if(calcPG(intList.get(n), razao) != intList.get((n+1)))
+				return false;					
+		return true;
+	}	
 	public static int calcPG(int n, int r)
 	{
 		return n + r;
@@ -39,11 +46,17 @@ public class ProgressaoAritmetica {
 		try
 		{			
 			if(isPg(numbers, 5))
-				System.out.println("È pg");
+				System.out.println("√© pg");
 		}
 		catch (Exception e) {
 			System.out.println(e.getMessage());
-		}		
+		}
+		
+		//ou:
+		if(isPaAlternativo(numbers,5)
+			System.out.println("√© pg");
+		else
+			System.out.println("n√£o √© pg");
 	}
 
 }
