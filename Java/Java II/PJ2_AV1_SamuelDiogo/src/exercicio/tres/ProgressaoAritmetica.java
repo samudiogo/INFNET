@@ -45,18 +45,18 @@ public class ProgressaoAritmetica {
 		
 		try
 		{			
-			if(isPa(numbers, 5))
-				System.out.println("é pg");
+			if(isPa(numbers, 7))// false: #output: Não é PA
+				System.out.println("é PA");
 		}
 		catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		
 		//ou:
-		if(isPaAlternativo(numbers,5))
-			System.out.println("é pg");
+		if(isPaAlternativo(numbers,5)) //true: #output: é PA
+			System.out.println("é PA");
 		else
-			System.out.println("não é pg");
+			System.out.println("não é PA");
 	}
 
 }
