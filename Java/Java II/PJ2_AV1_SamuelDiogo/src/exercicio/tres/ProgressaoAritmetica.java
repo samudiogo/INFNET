@@ -45,7 +45,7 @@ public class ProgressaoAritmetica {
 		
 		try
 		{			
-			if(isPg(numbers, 5))
+			if(isPa(numbers, 5))
 				System.out.println("é pg");
 		}
 		catch (Exception e) {
@@ -53,7 +53,7 @@ public class ProgressaoAritmetica {
 		}
 		
 		//ou:
-		if(isPaAlternativo(numbers,5)
+		if(isPaAlternativo(numbers,5))
 			System.out.println("é pg");
 		else
 			System.out.println("não é pg");
