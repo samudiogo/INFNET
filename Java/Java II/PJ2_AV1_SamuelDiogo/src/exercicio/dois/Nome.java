@@ -1,6 +1,6 @@
 /**
- * Crie um mÈtodo que recebe uma lista de nomes e um n˙mero inteiro (chamado de "limite"). 
- * O mÈtodo deve retornar uma lista de nomes. 
+ * Crie um m√©todo que recebe uma lista de nomes e um n√∫mero inteiro (chamado de "limite"). 
+ * O m√©todo deve retornar uma lista de nomes. 
  * A lista retornada possui todos os nomes da lista original compostos por mais palavras que o valor 
  * de "limite" *ou* que possuam o primeiro nome terminado em "z".
  * 
@@ -12,10 +12,9 @@ import java.util.ArrayList;
 
 public class Nome 
 {
-	// Este mÈtodo est·tico filtra uma lista de nomes com os parametros solicitados na quest„o da prova
+	// Este m√©todo est√°tico filtra uma lista de nomes com os parametros solicitados na quest√£o da prova
 	public static ArrayList<String> GetListofNamesEndingZorHaveLimits(ArrayList<String> nameList, int limit)
 	{
-	
 		ArrayList<String> filtredNames = new ArrayList<String>();
 		for(String name: nameList)
 		{
@@ -26,10 +25,8 @@ public class Nome
 			if(isOverLimit || isFirstNamedEndsWithZ)
 				filtredNames.add(name);			
 		}
-		
 		return filtredNames;
 	}
-	
 	
 	public static void main(String[] args)
 	{
@@ -59,9 +56,6 @@ public class Nome
 		listaDeNomes.add("Tessa Edmondson");
 		
 		ArrayList<String> nomesFiltrados = new ArrayList<String>();
-		
-
-		
 		
 		nomesFiltrados = GetListofNamesEndingZorHaveLimits(listaDeNomes,2);
 		for(String nome: nomesFiltrados)
